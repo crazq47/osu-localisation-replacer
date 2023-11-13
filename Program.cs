@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Reflection;
 
 class Paths
 {
@@ -41,9 +43,10 @@ class Program
         // Запуск сторонньої програми
         _ = Files.Osu.LaunchApplicationAsync(Paths.OsuApplicationFile);
         //
-        // Checking the file sizes in the 'Localization\custom' folder and updating them
-        // Перевірка розмірів файлів у теці "Localization\custom" і їх оновлення
-        Files.Localisation.Replace(Paths.LocalisationFolder, Paths.CustomLocalisationFolder, initialTxtFileSizes);
+        // Checking the file sizes in the 'Localization\custom' folder and updating them every 2 seconds
+        // Перевірка розмірів файлів у теці "Localization\custom" і їх оновлення кожні 2 секунди
+        Files.Localisation.ReplaceWithUpdates(Paths.LocalisationFolder, Paths.CustomLocalisationFolder,
+            initialTxtFileSizes, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(10));
     }
 
     class Files
@@ -80,12 +83,38 @@ class Program
                         // Replace file in 'Localization' with file from 'Localization\\custom'
                         // Заміна файлу у "Localization" файлом із "Localization\\custom"
                         string originalFilePath = Path.Combine(localizationFolder, Path.GetFileName(customLocalizationFiles[i]));
+                        //
                         if (File.Exists(originalFilePath))
                         {
                             File.Copy(customLocalizationFiles[i], originalFilePath, true);
                             //Console.WriteLine($"File '{Path.GetFileName(customLocalizationFiles[i])}' replaced in 'Localization' folder.");
                         }
                     }
+                }
+            }
+
+            public static void ReplaceWithUpdates(string localizationFolder, string customLocalizationFolder, long[] originalFileSizes, TimeSpan dueTime, TimeSpan period)
+            {
+                // Start the timer to call the method every 2 seconds
+                // Запускаємо таймер для виклику методу кожні 2 секунди
+                System.Threading.Timer timer = new System.Threading.Timer(Replace, null, TimeSpan.Zero, dueTime);
+                //
+                // Wait 1 minute before ending the program
+                // Чекаємо 1 хвилину перед завершенням програми
+                Thread.Sleep(period);
+                //
+                // Stop the timer before the program ends
+                // Зупиняємо таймер перед завершенням програми
+                timer.Dispose();
+                //
+                void Replace(object state)
+                {
+                    // Checking the file sizes in the 'Localization\custom' folder and updating them
+                    // Перевірка розмірів файлів у теці "Localization\custom" і їх оновлення
+                    Files.Localisation.Replace(localizationFolder, customLocalizationFolder, originalFileSizes);
+                    //
+                    // Якщо потрібно зупинити таймер після 1 хвилини
+                    //timer.Dispose();
                 }
             }
         }
