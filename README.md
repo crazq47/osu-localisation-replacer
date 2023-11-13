@@ -1,2 +1,2 @@
-# osu! Unofficial Localisation Replacer 1.0
-Tired of reinstalling the unofficial localization for osu every time you update? Then this is the place for you!
+# osu! Localisation Replacer 1.0
+Tired of reinstalling localisation every time you update osu!? Look no further!
