@@ -12,7 +12,7 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 Утиліта оцінює оригінальні файли локалізації та файли у теці "custom", якщо розмір версії файлу у теці "custom" більший за оригінал, то утиліта замінює його.
 Ви можете створити Ярлик і просто використовувати його замість звичайного Ярлика osu!.
 
-# Subtleties of work
+# Work intricacies 🔬
 🇬🇧 In update 1.2, control over program parameters through object arguments in shortcut properties was added.
 To correctly set the properties, it is necessary to specify two numbers (without quotation marks) after the path to the object, where the first number is the interval between checks (in milliseconds), and the second is the period of time for the checks to be performed (in seconds).
 For example: D:\Games\osu!\osu!loc.exe 10 10.
