@@ -19,7 +19,7 @@ class Paths
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         if (!Directory.Exists(Paths.CustomLocalisationFolder))
         {
@@ -43,10 +43,11 @@ class Program
         // Запуск сторонньої програми
         _ = Files.Osu.LaunchApplicationAsync(Paths.OsuApplicationFile);
         //
-        // Checking the file sizes in the 'Localization\custom' folder and updating them every 2 seconds
-        // Перевірка розмірів файлів у теці "Localization\custom" і їх оновлення кожні 2 секунди
+        // Checking the file sizes in the 'Localization\custom' folder and updating them every n seconds
+        // Перевірка розмірів файлів у теці "Localization\custom" і їх оновлення кожні n секунд
         Files.Localisation.ReplaceWithUpdates(Paths.LocalisationFolder, Paths.CustomLocalisationFolder,
-            initialTxtFileSizes, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(10));
+            initialTxtFileSizes, Paremeters.GetUpdateIntervalArg(args), Paremeters.GetUpdatePeriodArg(args));
+
     }
 
     class Files
@@ -95,8 +96,8 @@ class Program
 
             public static void ReplaceWithUpdates(string localizationFolder, string customLocalizationFolder, long[] originalFileSizes, TimeSpan dueTime, TimeSpan period)
             {
-                // Start the timer to call the method every 2 seconds
-                // Запускаємо таймер для виклику методу кожні 2 секунди
+                // Start the timer to call the method every n seconds
+                // Запускаємо таймер для виклику методу кожні n секунд
                 System.Threading.Timer timer = new System.Threading.Timer(Replace, null, TimeSpan.Zero, dueTime);
                 //
                 // Wait 1 minute before ending the program
@@ -150,5 +151,52 @@ class Program
 
             return fileSizes;
         }
+    }
+}
+
+class Paremeters
+{
+    // Interval between checks (in milliseconds)
+    // Інтервал між перевірками (у мілісекундах)
+    public static int UpdateInterval = 10;
+    //
+    // Duration of checks (in seconds)
+    // Тривалість перевірок (у секундах)
+    public static int UpdatePeriod = 10;
+
+    public static TimeSpan GetUpdateIntervalArg(string[] args)
+    {
+        // Замість TimeSpan.FromSeconds(1) використовуємо значення з аргументів командного рядку
+        // Якщо значення не вказане, за замовчуванням використовується 1 секунда
+        int updateIntervalInMilliseconds = UpdateInterval;
+        if (args.Length >= 1 && int.TryParse(args[0], out int interval))
+        {
+            updateIntervalInMilliseconds = interval;
+        }
+
+        return TimeSpan.FromMilliseconds(updateIntervalInMilliseconds);
+    }
+
+    public static TimeSpan GetUpdatePeriodArg(string[] args)
+    {
+        // Замість TimeSpan.FromSeconds(10) використовуємо значення з аргументів командного рядку
+        // Якщо значення не вказане, за замовчуванням використовується 10 секунд
+        int maxUpdateTimeInSeconds = UpdatePeriod;
+        if (args.Length >= 2 && int.TryParse(args[1], out int time))
+        {
+            maxUpdateTimeInSeconds = time;
+        }
+
+        return TimeSpan.FromSeconds(maxUpdateTimeInSeconds);
+    }
+
+    public void ArgDebuging(string[] args)
+    {
+        // Виведення значень GetUpdateInterval та GetUpdatePeriod через MessageBox
+        MessageBox.Show($"Update Interval: {Paremeters.GetUpdateIntervalArg(args).TotalMilliseconds} milliseconds");
+        MessageBox.Show($"Update Period: {Paremeters.GetUpdatePeriodArg(args).TotalSeconds} seconds");
+
+        // Якщо вам необхідно вивести деталі про аргументи командного рядка, використовуйте наступний код:
+        MessageBox.Show($"Arguments: {string.Join(", ", args)}");
     }
 }
