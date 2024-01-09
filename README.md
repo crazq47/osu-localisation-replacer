@@ -15,8 +15,10 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 # Work intricacies 🔬
 🇬🇧 In update 1.2, control over program parameters through object arguments in shortcut properties was added.
 To correctly set the properties, it is necessary to specify two numbers (without quotation marks) after the path to the object, where the first number is the interval between checks (in milliseconds), and the second is the period of time for the checks to be performed (in seconds).
+
 For example: _D:\Games\osu!\osu!loc.exe 10 10._
 
 🇺🇦 У оновленні 1.2 було додано керування параметрами програми через аргументи об'єкта у властивостях ярлика.
 Щоби правильно задати властивості, слід вказати після шляху до об'єкта два числа (без кавичок), де Перше число - Інтервал між перевірками (у мілісекундах), а Друге - Період часу виконання перевірок (у секундах)
-Наприклад: _D:\Games\osu!\osu!loc.exe 10 10_
+
+ Наприклад: _D:\Games\osu!\osu!loc.exe 10 10_
