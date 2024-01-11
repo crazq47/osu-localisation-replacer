@@ -12,23 +12,23 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 Утиліта оцінює оригінальні файли локалізації та файли у теці "custom", якщо розмір версії файлу у теці "custom" більший за оригінал, то утиліта замінює його.
 Ви можете створити Ярлик і просто використовувати його замість звичайного Ярлика osu!.
 
-# Work intricacies 🔬
-🇬🇧 In the 1.3 update, we improved the management of program parameters through object arguments in the shortcut properties.
+# Work intricacies! 🔬
+🇬🇧 In the **1.3** update, we improved the management of program parameters through object arguments in the shortcut properties.
 To set the properties correctly, you need to specify the required parameters after the object path, set the equals to and specify their values, without quotes.
 
- _For example: D:\Games\osu!\osu!loc.exe updateInterval=10_
+ _**For example:** D:\Games\osu!\osu!loc.exe **updateInterval=10**_
 
  All existing parameters:
- - updateInterval — the interval between checks, in milliseconds. The default value is 100.
- - updatesPeriod — the time in seconds during which the checks will be performed. The default value is 2.
- - disableLogging — enables, if the value is 'false' or disables, if the value is 'true', logging of debugging in the 'Logs' folder. The default value is false.
+ - **updateInterval** — the interval between checks, in milliseconds. The default value is **100**.
+ - **updatesPeriod** — the time in seconds during which the checks will be performed. The default value is **2**.
+ - **disableLogging** — enables, if the value is 'false' or disables, if the value is 'true', logging of debugging in the 'Logs' folder. The default value is **false**.
 
-🇺🇦 У оновленні 1.3 було водосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
+🇺🇦 У оновленні **1.3** було вдосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
 Щоби правильно задати властивості, слід вказати після шляху до об'єкта необхідні параметри, поставити дорівнює та вказати їх значення, без кавичок.
 
- _Наприклад: D:\Games\osu!\osu!loc.exe updateInterval=10_
+ _**Наприклад:** D:\Games\osu!\osu!loc.exe **updateInterval=10**_
 
  Усі існуючі параметри:
- - updateInterval — інтервал між перевірками, у мілісекундах. Типове значення — 100.
- - updatesPeriod — час у секундах, протягом якого будуть виконуватися перевірки. Типове значення — 2.
- - disableLogging — вмикає, якщо значення "false" або вимикає — "true" ведення журналу відлагодження у теці "Logs". Типове значення — false.
+ - **updateInterval** — інтервал між перевірками, у мілісекундах. Типове значення — **100**.
+ - **updatesPeriod** — час у секундах, протягом якого будуть виконуватися перевірки. Типове значення — **2**.
+ - **disableLogging** — вмикає, якщо значення "false" або вимикає — "true" ведення журналу відлагодження у теці "Logs". Типове значення — **false**.
