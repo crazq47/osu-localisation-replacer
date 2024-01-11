@@ -1,4 +1,4 @@
-# osu-stable! Localisation Auto-Replacer 1.2 🧐
+# osu-stable! Localisation Auto-Replacer 1.3 🧐
 🇬🇧 Tired of reinstalling localisation every time you update osu!? Look no further!
 
 🇺🇦 Набридло перевстановлювати локалізацію щоразу після оновлення osu!? Тоді вам сюди!
@@ -13,12 +13,22 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 Ви можете створити Ярлик і просто використовувати його замість звичайного Ярлика osu!.
 
 # Work intricacies 🔬
-🇬🇧 In update 1.2, control over program parameters through object arguments in shortcut properties was added.
-To correctly set the properties, it is necessary to specify two numbers (without quotation marks) after the path to the object, where the first number is the interval between checks (in milliseconds), and the second is the period of time for the checks to be performed (in seconds).
+🇬🇧 In the 1.3 update, we improved the management of program parameters through object arguments in the shortcut properties.
+To set the properties correctly, you need to specify the required parameters after the object path, set the equals to and specify their values, without quotes.
 
-For example: _D:\Games\osu!\osu!loc.exe 10 10._
+ _For example: D:\Games\osu!\osu!loc.exe updateInterval=10_
 
-🇺🇦 У оновленні 1.2 було додано керування параметрами програми через аргументи об'єкта у властивостях ярлика.
-Щоби правильно задати властивості, слід вказати після шляху до об'єкта два числа (без кавичок), де Перше число - Інтервал між перевірками (у мілісекундах), а Друге - Період часу виконання перевірок (у секундах)
+ All existing parameters:
+ - updateInterval — the interval between checks, in milliseconds. The default value is 100.
+ - updatesPeriod — the time in seconds during which the checks will be performed. The default value is 2.
+ - disableLogging — enables, if the value is 'false' or disables, if the value is 'true', logging of debugging in the 'Logs' folder. The default value is false.
 
- Наприклад: _D:\Games\osu!\osu!loc.exe 10 10_
+🇺🇦 У оновленні 1.3 було водосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
+Щоби правильно задати властивості, слід вказати після шляху до об'єкта необхідні параметри, поставити дорівнює та вказати їх значення, без кавичок.
+
+ _Наприклад: D:\Games\osu!\osu!loc.exe updateInterval=10_
+
+ Усі існуючі параметри:
+ - updateInterval — інтервал між перевірками, у мілісекундах. Типове значення — 100.
+ - updatesPeriod — час у секундах, протягом якого будуть виконуватися перевірки. Типове значення — 2.
+ - disableLogging — вмикає, якщо значення "false" або вимикає — "true" ведення журналу відлагодження у теці "Logs". Типове значення — false.
