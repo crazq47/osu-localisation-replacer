@@ -1,0 +1,37 @@
+/*
+ * Copyright (C) 2023-2024 crazq
+ * 
+ * This program (osu!loc) is designed for replacing localizations in osu!.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to 
+ * permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * 
+ * 1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * 2. The Software may not be used for any illegal or malicious activities.
+ * 3. The author is not responsible for any damages or issues arising from the use of this Software.
+ * 
+ * Please note that this program is version 1.3.0.0.
+ * Check for updates or new versions before use.
+ */
+
+
+/*
+ * Авторські права (C) 2023-2024 crazq
+ * 
+ * Ця програма (osu!loc) призначена для заміни локалізацій в osu!.
+ * 
+ * Дозволяється будь-якій особі, яка отримала копію цього програмного забезпечення та пов'язаних 
+ * файлів документації («Програмне забезпечення»), використовувати Програмне забезпечення без обмежень, 
+ * включаючи, але не обмежуючись правом використання, копіювання, зміни, об'єднання, публікації, розповсюдження, 
+ * субліцензування та / або продажу копій Програмного забезпечення, а також надавати особам, яким Програмне 
+ * забезпечення надається, це зробити, за умови виконання наступних умов:
+ * 
+ * 1. При кожному використанні Програмного забезпечення або значної частини нього, повинні включатися вищезазначені умови та це повідомлення про дозвіл.
+ * 2. Програмне забезпечення не повинно використовуватися для незаконних або зловмисних дій.
+ * 3. Автор не несе відповідальності за будь-які збитки або проблеми, що виникають в результаті використання цього Програмного забезпечення.
+ * 
+ * Зверніть увагу, що ця програма має версію 1.3.0.0.
+ * Перевірте оновлення або нові версії перед використанням.
+ */
