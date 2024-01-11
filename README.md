@@ -16,7 +16,7 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 🇬🇧 In the **1.3** update, we improved the management of program parameters through object arguments in the shortcut properties.
 To set the properties correctly, you need to specify the required parameters after the object path, set the equals to and specify their values, without quotes.
 
- _**For example:** D:\Games\osu!\osu!loc.exe **updateInterval=10**_
+ _**For example:** D:\Games\osu!\osu!loc.exe **updateInterval=100** **updatesPeriod=2**_
 
  All existing parameters:
  - **updateInterval** — the interval between checks, in milliseconds. The default value is **100**.
@@ -26,7 +26,7 @@ To set the properties correctly, you need to specify the required parameters aft
 🇺🇦 У оновленні **1.3** було вдосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
 Щоби правильно задати властивості, слід вказати після шляху до об'єкта необхідні параметри, поставити дорівнює та вказати їх значення, без кавичок.
 
- _**Наприклад:** D:\Games\osu!\osu!loc.exe **updateInterval=10**_
+ _**Наприклад:** D:\Games\osu!\osu!loc.exe **updateInterval=100** **updatesPeriod=2**_
 
  Усі існуючі параметри:
  - **updateInterval** — інтервал між перевірками, у мілісекундах. Типове значення — **100**.
