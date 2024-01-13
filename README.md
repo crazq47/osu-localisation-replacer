@@ -21,7 +21,7 @@ To set the properties correctly, you need to specify the required parameters aft
  All existing parameters:
  - **updateInterval** — the interval between checks, in milliseconds. The default value is **100**.
  - **updatesPeriod** — the time in seconds during which the checks will be performed. The default value is **2**.
- - **disableLogging** — enables, if the value is 'false' or disables, if the value is 'true', logging of debugging in the 'Logs' folder. The default value is **false**.
+ - **disableLogging** — disables, if the value is 'true' or enables, if the value is 'false', logging of debugging in the 'Logs' folder. The default value is **false**.
 
 🇺🇦 У оновленні **1.3** було вдосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
 Щоби правильно задати властивості, слід вказати після шляху до об'єкта необхідні параметри, поставити дорівнює та вказати їх значення, без кавичок.
@@ -31,4 +31,4 @@ To set the properties correctly, you need to specify the required parameters aft
  Усі існуючі параметри:
  - **updateInterval** — інтервал між перевірками, у мілісекундах. Типове значення — **100**.
  - **updatesPeriod** — час у секундах, протягом якого будуть виконуватися перевірки. Типове значення — **2**.
- - **disableLogging** — вмикає, якщо значення "false" або вимикає — "true" ведення журналу відлагодження у теці "Logs". Типове значення — **false**.
+ - **disableLogging** — вимикає, якщо значення "true" або вмикає — "false" ведення журналу відлагодження у теці "Logs". За замовчуванням — **false**.
