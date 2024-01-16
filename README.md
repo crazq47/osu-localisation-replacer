@@ -14,21 +14,21 @@ You can create a shortcut and use it instead of the regular osu! shortcut.
 
 # Work intricacies! 🔬
 🇬🇧 In the **1.3** update, we improved the management of program parameters through object arguments in the shortcut properties.
-To set the properties correctly, you need to specify the required parameters after the object path, set the equals to and specify their values, without quotes.
+To set a property correctly, you should put two dashes after the path to the object, specify the necessary parameters, put an equal sign, and specify their values without quotes.
 
- _**For example:** D:\Games\osu!\osu!loc.exe **updateInterval=100** **updatesPeriod=2**_
+ _**For example:** D:\Games\osu!\osu!loc.exe **--update-interval=100** **--updates-period=2** **--disable-logging=true**_
 
  All existing parameters:
- - **updateInterval** — the interval between checks, in milliseconds. The default value is **100**.
- - **updatesPeriod** — the time in seconds during which the checks will be performed. The default value is **2**.
- - **disableLogging** — disables, if the value is 'true' or enables, if the value is 'false', logging of debugging in the 'Logs' folder. The default value is **false**.
+ - **update-interval** — the interval between checks, in milliseconds. The default value is **100**.
+ - **updates-period** — the time in seconds during which the checks will be performed. The default value is **2**.
+ - **disable-logging** — disables, if the value is 'true' or enables, if the value is 'false', logging of debugging in the 'Logs' folder. The default value is **false**.
 
 🇺🇦 У оновленні **1.3** було вдосконалено керування параметрами програми через аргументи об'єкта у властивостях ярлика.
-Щоби правильно задати властивості, слід вказати після шляху до об'єкта необхідні параметри, поставити дорівнює та вказати їх значення, без кавичок.
+Щоби правильно задати властивості, слід поставити дві риски, вказати після шляху до об'єкта необхідні параметри та поставити дорівнює та вказати їх значення, без кавичок.
 
- _**Наприклад:** D:\Games\osu!\osu!loc.exe **updateInterval=100** **updatesPeriod=2**_
+ _**Наприклад:** D:\Games\osu!\osu!loc.exe **--update-interval=100** **--updates-period=2** **--disable-logging=true**_
 
  Усі існуючі параметри:
- - **updateInterval** — інтервал між перевірками, у мілісекундах. За замовчуванням — **100**.
- - **updatesPeriod** — час у секундах, протягом якого будуть виконуватися перевірки. За замовчуванням — **2**.
- - **disableLogging** — вимикає, якщо значення "true" або вмикає — "false" ведення журналу відлагодження у теці "Logs". За замовчуванням — **false**.
+ - **update-interval** — інтервал між перевірками, у мілісекундах. За замовчуванням — **100**.
+ - **updates-period** — час у секундах, протягом якого будуть виконуватися перевірки. За замовчуванням — **2**.
+ - **disable-logging** — вимикає, якщо значення "true" або вмикає — "false" ведення журналу відлагодження у теці "Logs". За замовчуванням — **false**.
