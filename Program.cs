@@ -56,7 +56,7 @@ class Program
         /// 🇬🇧 Debug logging
         /// 🇺🇦 Ведення журналу відлагодження
         Parameters.ProvideLogging(args);
-        
+
         return;
     }
 
@@ -124,7 +124,7 @@ class Program
         /// </returns>
         public static TimeSpan GetUpdateIntervalArg(string[] args)
         {
-            string searchedArg = "updateInterval=";
+            string searchedArg = "--update-interval=";
             return TimeSpan.FromMilliseconds(GetIntArg(args, searchedArg) != -1 ?
                 GetIntArg(args, searchedArg) : DefaultValues.UpdateInterval);
         }
@@ -147,7 +147,7 @@ class Program
         /// </returns>
         public static TimeSpan GetUpdatePeriodArg(string[] args)
         {
-            string searchedArg = "updatesPeriod=";
+            string searchedArg = "--updates-period=";
             return TimeSpan.FromSeconds(GetIntArg(args, searchedArg) != -1 ?
                 GetIntArg(args, searchedArg) : DefaultValues.UpdatePeriod);
         }
@@ -165,12 +165,12 @@ class Program
         /// 🇺🇦 Масив аргументів командного рядка. </param>
         /// 
         /// <returns>
-        /// 🇬🇧 The value of the <see cref="bool"/> argument of the "enableLogging" command line argument. The default is <see langword="false"/>. <br/>
-        /// 🇺🇦 <see cref="bool"/> значення  аргумента "enableLogging" командного рядка. За замовчуванням — <see langword="false"/>.
+        /// 🇬🇧 The value of the <see cref="bool"/> argument of the "enable-logging" command line argument. The default is <see langword="false"/>. <br/>
+        /// 🇺🇦 <see cref="bool"/> значення  аргумента "enable-logging" командного рядка. За замовчуванням — <see langword="false"/>.
         /// </returns>
         public static bool GetDisableLoggingArg(string[] args)
         {
-            string searchedArg = "disableLogging=";
+            string searchedArg = "--disable-logging=";
             DefaultValues.DisableLogging = GetBoolArg(args, searchedArg);
 
             return DefaultValues.DisableLogging;
@@ -351,7 +351,7 @@ class Program
         /// </returns>
         public static string SetLogData()
         {
-             return $"{DateTime.Now:yyyy-MM-ddTHH:mm:ss}:";
+            return $"{DateTime.Now:yyyy-MM-ddTHH:mm:ss}:";
         }
 
         /// <summary>
@@ -489,7 +489,7 @@ class Files
             /// </returns>
             public static string Restarting = "false";
         }
-        
+
         public static string ApplicationFile = "osu!.exe";
         public static string ProccesName = "osu!";
 
@@ -594,7 +594,7 @@ class Files
                         int period = (DefaultValues.UpdatePeriod * 100) - DefaultValues.UpdateInterval;
                         /// 🇬🇧 Waiting for n seconds to close
                         /// 🇺🇦 Очікування n секунд на закриття
-                        if (!process.WaitForExit(period)) 
+                        if (!process.WaitForExit(period))
                         {
                             /// 🇬🇧 If it was not possible to close the main window — Kill
                             /// 🇺🇦 Якщо не вдалося закрити головне вікно, використовуємо Kill
@@ -686,7 +686,7 @@ class Files
         /// 🇬🇧 The name of the running <see cref="Process"/>. <br/>
         /// 🇺🇦 Назва запущеного процесу <see cref="Process"/>.
         /// </returns>
-        public static string GetProcessName(string appPath) 
+        public static string GetProcessName(string appPath)
         {
             /// 🇬🇧 Run the application process
             /// 🇺🇦 Запуск прикладового процесу
@@ -761,7 +761,7 @@ class Files
         /// 🇺🇦 Кількість дійсних ітерацій заміни файлів.
         /// </returns>
         public static long ActualIterations = 0;
-        
+
         /// <summary>
         /// 🇬🇧 Replaces localization files in a folder with the same files from another folder. 
         /// Note that files will only be replaced if the file being replaced is larger than the original file. <br/><br/> 
